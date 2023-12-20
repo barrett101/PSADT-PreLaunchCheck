@@ -2,7 +2,7 @@
 
 ## DESCRIPTION
 This is a PSADT prelaunch script designed for Intune.  If no user is logged in or if OOBE/ESP/Autopilot is running it will run in NonInteractive Mode, otherwise it will run
-in ServiceUI.exe mode to elevate the GUI.  
+in ServiceUI.exe mode to elevate the GUI.  The ServiceUI.exe here is the x64 version of the file.
 
 Log file can be found below.  The logs will be overridden each time an Win32 app is installed.
 
