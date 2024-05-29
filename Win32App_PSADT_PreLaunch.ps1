@@ -7,7 +7,7 @@ param (
 Start-Transcript -Path "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Win32App_PSADT_PreLaunch.log"
 
 #Below will get the active user logged in, if no user logged in, it will return variable as null.
-$CheckUser = Get-CimInstance -ComputerName $env:computername -ClassName Win32_ComputerSystem | Select-Object -ExpandProperty UserName
+$CheckUser = Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object -ExpandProperty UserName
 If ($CheckUser -eq $null)
 {
 	Write-Host "No User is Logged into Computer, running in Non-Interactive mode"
