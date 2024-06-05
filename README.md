@@ -37,6 +37,10 @@ Below will run the script in Install mode, and check for process notepad and win
 
 Win32App_PSADT_PreLaunch_ProcessCheck.ps1 -DeploymentType "Install" -Process "notepad,winword"
 
+Below will run the script in Install mode, and check for the explorer process, this will force it to prompt the user to install everytime not matter what.
+
+Win32App_PSADT_PreLaunch_ProcessCheck.ps1 -DeploymentType "Install" -Process "explorer"
+
 Use below for Intune Install Command field
 
 powershell.exe -executionpolicy bypass -file "Win32App_PSADT_PreLaunch_ProcessCheck.ps1" -DeploymentType "Install" -Process "notepad,winword"
@@ -45,6 +49,10 @@ powershell.exe -executionpolicy bypass -file "Win32App_PSADT_PreLaunch_ProcessCh
 Below will run the script in Install mode, and check for process notepad and winword.
 
 Win32App_PSADT_PreLaunch_ProcessCheck.ps1 -DeploymentType Uninstall -Process "notepad,winword"
+
+Below will run the script in Uninstall mode, and check for the explorer process, this will force it to prompt the user to uninstall everytime not matter what.
+
+Win32App_PSADT_PreLaunch_ProcessCheck.ps1 -DeploymentType "Uninstall" -Process "explorer"
 
 Use below for Intune Uninstall Command field
 
